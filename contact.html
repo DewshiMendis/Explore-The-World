@@ -1,0 +1,179 @@
+<!--Name - Dewshini Mendis -->
+<!--Student_ID - 10675332 -->
+<!--Validated -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Character encoding and responsive design meta tags
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        Page title for Contact page
+    -->
+    <title>Contact Us - Explore The World</title>
+
+    <!--
+        External CSS stylesheet link
+        This single CSS file controls all visual styling and layout
+        across the entire website as required by the assignment
+    -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER SECTION ==================== -->
+    <header>
+        <h1>Explore The World</h1>
+        <p>Discover the beauty of our planet, one continent at a time</p>
+    </header>
+
+    <!-- ==================== NAVIGATION SECTION ==================== -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <!-- Current page - Contact: styled with active class -->
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ==================== BREADCRUMB NAVIGATION ==================== -->
+    <!-- Breadcrumb shows user's current position in the site hierarchy -->
+    <p><a href="index.html">Home</a> &gt; Contact</p>
+
+    <!-- ========== MAIN CONTENT SECTION ============ -->
+    <main>
+
+        <section>
+            <h2>Contact Us</h2>
+
+            <!--
+                Introduction paragraph for the contact page
+            -->
+            <p>Got questions, comments, or partnership ideas? Fill out the form below or use the info provided.</p>
+
+            <!--
+                Two-column contact layout using .contact-layout class.
+                Left side: the contact form (.contact-form)
+                Right side: contact information card (.contact-info)
+                This layout follows the wireframe design showing form and info side by side.
+                On tablet/mobile, these stack vertically via responsive CSS.
+            -->
+            <div class="contact-layout">
+
+                <!-- ===== LEFT COLUMN: Contact Form ===== -->
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+
+                    <!--
+                        Contact form section
+                        Forms are significant when it comes to interaction with users
+                        Note: Form functionality needs backend programming (not in this assignment)
+                    -->
+                    <form action="#" method="post">
+
+                        <!--
+                            Name input field
+                            <label> with for attribute enhances accessibility
+                            for attribute links label to input through id
+                            required attribute makes field mandatory
+                        -->
+                        <p>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </p>
+
+                        <!--
+                            Email input field
+                            Built-in email validation with type="email"
+                            Browser will verify email format automatically
+                        -->
+                        <p>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </p>
+
+                        <!--
+                            Subject input field
+                            Optional field (no required attribute)
+                            Helps categorize incoming messages
+                        -->
+                        <p>
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What is this about?">
+                        </p>
+
+                        <!--
+                            Message textarea
+                            rows and cols determine initial visible size
+                            Users can type beyond the visible space
+                        -->
+                        <p>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" cols="40" placeholder="Type your message here..." required></textarea>
+                        </p>
+
+                        <!-- Submit button -->
+                        <p>
+                            <input type="submit" value="Send Message">
+                        </p>
+
+                    </form>
+                </div>
+
+                <!-- ===== RIGHT COLUMN: Contact Information ===== -->
+                <!--
+                    Contact info card styled with .contact-info class.
+                    Displays email, phone, address, and social links.
+                    Below it is a placeholder for an embedded map.
+                -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+
+                    <!-- Email link using mailto: protocol (required by assignment) -->
+                    <p><strong>Email:</strong> <a href="mailto:contact@email.com">contact@email.com</a></p>
+
+                    <!-- Phone contact details -->
+                    <p><strong>Phone:</strong> +94773-456-789</p>
+
+                    <!-- Physical address -->
+                    <p><strong>Address:</strong> 123 Main Street, Sri Lanka</p>
+
+                    <!-- Social media links (placeholders) -->
+                    <p><strong>Social:</strong>
+                        <a href="#" target="_blank">FB</a> |
+                        <a href="#" target="_blank">Twitter</a> |
+                        <a href="#" target="_blank">IG</a>
+                    </p>
+
+                    <p><em>Partnership or press? Email us.</em></p>
+
+                    <!-- Embedded map -->
+                    <div class="contact-map">
+                        <iframe
+                            title="Explore The World Office Location"
+                            src="https://www.google.com/maps’q=Colombo%2C%20Sri%20Lanka&output=embed"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER SECTION ==================== -->
+    <footer>
+        <hr>
+        <p>Email: <a href="mailto:contact@email.com">contact@email.com</a> | Explore.org</p>
+        <p>Copyright &copy; 2026 Explore the World</p>
+    </footer>
+
+</body>
+</html>

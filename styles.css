@@ -1,0 +1,1898 @@
+/* =============================================
+   EXPLORE THE WORLD - Main External Stylesheet
+   Name: Dewshini Mendis
+   Student ID: 10675332
+   ============================================== */
+
+
+/* ==============================================================
+   1. Google fonts import part
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Nunito:wght@300;400;500;600;700&display=swap');
+
+
+/* ==============================================================
+   2. CSS KEYFRAME ANIMATIONS
+   Unique animations featured in the entire webpage to ensure smooth, 
+   hi-tech touch whenever things come into the scene. These provide animation to
+   the interface.
+   ============================================================ */
+
+/*
+   fadeInUp: 
+   Applied on the primary content area to give the page a smooth load. 
+   Fades in below the end point after 30px with no color and then fades in to its natural location.
+*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*
+   slideDown: Elements move downwards at the top of the page. 
+   Applied to the header to form an effect of an entrance when loading the page..
+*/
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*
+   pulseGlow:  A low-level pulse effect.
+   Applied to linking the submit button to accentuate the main take on the contact form.
+*/
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(232, 116, 43, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(232, 116, 43, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(232, 116, 43, 0);
+    }
+}
+
+/*
+   gradientShift:This Shifts the background gradient slowly. Applied to the header to give it a living breathing
+   gradient that fades in and out slightly to add visual energy to the header.
+*/
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* ==============================================================
+   3. CSS RESET & BASE STYLES
+   Made the default browser margins, paddings, and box-sizing consistent across browsers. 
+   Used the  border-box to ensure that calculations of the width consider padding and border, 
+   and making layout calculations simpler in the entire stylesheet.
+   ============================================================ */
+
+/* This Resets everything and its pseudo-elements. */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+  - set the  minimum font size 16px (browser default, it's good in terms of accessibility)
+    - scrolling of anchors links (From back to top etc.)
+    - smooth scrolling.
+    - scroll-padding-top puts the sticky nav height in so.
+    anchor links are not lost under the navigation bar.
+*/
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+/*
+   - Used Nunito font to have friendly readable body texts.
+    - used Strong contrast with light background in dark navy text colour.
+    - White cards are given depth with light blue-grey background.
+    - The line-height is 1.75 with generous reading space.
+    - overflow-x hidden avoids horizontal scroll animation
+    - overflow-x hidden disallows horizontal scroll animation.
+*/
+body {
+    font-family: 'Nunito', 'Segoe UI', Arial, sans-serif;
+    color: #1A1A2E;
+    background-color: #F0F4F8;
+    line-height: 1.75;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/*
+   This part is a  Webkit styling of scrollbar ( Chrome, Edge, Safari ).
+    The scrollbar is of a similar blue palette used in the site.
+*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* This is the background rail */
+::-webkit-scrollbar-track {
+    background: #F0F4F8;
+}
+
+/* This is the draggable part and it is styled with blue gradient */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4A6FA5, #1B2A4A);
+    border-radius: 4px;
+}
+
+/* THis is used for slightly lightering for visual feedback */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #5A8FCC, #2A4A7A);
+}
+
+
+/* ==============================================================
+   4. TYPOGRAPHY
+   To be readable and optimized to search engines, it is necessary to have a proper hierarchy of headings.
+    Poppins lends names a contemporary hard-edge impression.
+    The levels are of different size, weight and colour treatment.
+   ============================================================ */
+
+/* Poppins font family has been used to maintain the brand consistency in all the headings. */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    color: #1A1A2E;
+    line-height: 1.3;
+    margin-bottom: 0.5em;
+}
+
+/*
+   H1: The heading site title.
+    Big, bold and upper case because of strong brand presence.
+    The shadow of text provides a slight depth on the dark header.
+*/
+h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/*
+   H2: Heading titles such as Explore Continents, About, etc.
+    Also has the deep blue colour with a decorative bottom border.
+    position: relative allows the pseudo-element of position to
+    have an animated underline decoration upon hover.
+*/
+h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #1B2A4A;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    position: relative;
+    display: inline-block;
+}
+
+/*
+   H2 decorative underline with pseudo-element after.
+    Shapes gradient bar beneath each h2 heading that reaches.
+    to gold, which brings some warmness in the design.
+    Presents a smooth transition when hovering as a revealing effect.
+
+*/
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #E8742B, #F4A940);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+/*
+   When the cursor is hovering the decorative underline is then at full size.
+   thickness of the heading, and it gives a very interesting reveal effect.
+
+*/
+h2:hover::after {
+    width: 100%;
+}
+
+/* H3: Subsection headings for Overview, Key Facts, etc.
+   The left side accent renders a visual hierarchy and adds.
+   colour appeal to the page design.*/
+h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #4A6FA5;
+    margin-top: 1.8rem;
+    margin-bottom: 0.6rem;
+    padding-left: 0;
+    border-left: none;
+}
+
+/*
+   H4: Country and destination names within continent pages.
+   Wears the orange accent colour so as to imply warmth and differentiation.
+   With bold weight, but a little larger than body text.
+*/
+h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #E8742B;
+    margin-top: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+/* Paragraphs: not too small and bottom margin is big enough */
+p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Strong text: darker colour for emphasis within the text content */
+strong {
+    font-weight: 700;
+    color: #1A1A2E;
+}
+
+/* Emphasized/italic text styling */
+em {
+    font-style: italic;
+    color: #555;
+}
+
+
+/* ==============================================================
+   5. LINK STYLES
+   The orange accent colour is applied in links.
+   On hover, there is a visual feedback of a smooth colour transition.
+   Focus states ensure keyboard navigation accessibility.
+   ============================================================ */
+
+/* Default link: orange colour, no underline, smooth transitions */
+a {
+    color: #E8742B;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover: This colour shifts to a darker orange */
+a:hover {
+    color: #C5611F;
+}
+
+/*
+   Focus state: dashed outline for keyboard navigation.
+   Accessibility required - enables keyboard users.
+   to see which link is currently focused.
+*/
+a:focus {
+    outline: 2px dashed #E8742B;
+    outline-offset: 3px;
+}
+
+
+/* ==============================================================
+   6. HEADER SECTION
+   The hero section of each page is known as the header.
+    It employs a moving animated background, which moves gradually.
+    generating a living, dynamic sense. The gradient goes from
+    deep navy to ocean blue to add depth to the picture.
+    The bottom wave is a decoration made by means of ::after and clip-path.
+   ============================================================ */
+
+header {
+    background: linear-gradient(135deg, #1B2A4A, #2C4A7C, #4A6FA5, #2C4A7C);
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2.8rem 2rem 2.5rem;
+    position: relative;
+}
+
+/*
+   Header ::after creates a curved/wave bottom edge.
+   This is a decorative feature which is a CSS clip-path cut.
+    the lower part of the header into a curvy shape,
+    Bringing visual appeal to the navigation changeover.
+*/
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(135deg, #1B2A4A, #2C4A7C, #4A6FA5, #2C4A7C);
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+    clip-path: ellipse(55% 100% at 50% 0%);
+    z-index: 5;
+}
+
+/*
+   Header H1: animation of white text after loading a page.
+    The title is made to appear with the aid of the slideDown animation.
+    transpire immediately the page is loaded.
+*/
+header h1 {
+    color: #FFFFFF;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: slideDown 0.8s ease forwards;
+}
+
+/*
+   Header tagline/subtitle: Adjusted to a  lighter blue to white colour.
+   set to a thinner weight and wider letter-spacing to create an
+   elegant, refined appearance below the main title.
+*/
+header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    margin-bottom: 0;
+    animation: slideDown 1s ease forwards;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* ======================================
+   7. NAVIGATION SECTION
+   ====================================== */
+
+/* 
+   Used a Sticky navigation that stays visible while scrolling.
+   Uses a semi transparent dark background with backdrop-blur
+   for a modern glassmorphism look. The nav sits above the
+   header wave decoration which is (z-index: 1000).
+   Active page link has been oriented in different syle.
+ */
+
+nav {
+    background-color: rgba(27, 42, 74, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12);
+}
+
+/*
+   Navigation list: flexbox horizontal layout.
+   list-style: none will remove the default bullet points.
+   justify-content: center centres the links.
+*/
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation list items */
+nav ul li {
+    margin: 0;
+}
+
+/*
+   Navigation links: block-level used for full clickable area.
+   position: relative enables the ::after animated underline.
+   The text is set to uppercase and spaced for a clean, modern look.
+*/
+nav ul li a {
+    display: block;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0.9rem 2.2rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/*
+   Nav link ::after: creates an animated underline that
+   slides in from the left on hover. Starts at width: 0
+   and it expands to the full width, and creating a reveal effect.
+*/
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #E8742B, #F4A940);
+    transition: width 0.4s ease;
+}
+
+/*
+   Nav hover state: text is set to become fully white,
+   background lightens is set to slight color, and the gradient
+   underline slides in from the left side.
+*/
+nav ul li a:hover {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* The underline expands to full width on hover */
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/*
+   Active navigation link styling.
+   When the current nav link is given the.active class by the page,
+   it displays the continuity of the underline and brighter colour of the text.
+   so the users will constantly be aware of what page they are on.
+*/
+nav ul li a.active {
+    color: #FFFFFF;
+    border-bottom: 3px solid #E8742B;
+}
+
+
+/* ===============================
+   8. BREADCRUMB NAVIGATION
+   =============================== */
+
+/* 
+   Breadcrumbs indicate the location of the user in the site structure.
+   (e.g., Home > Asia > Japan). Styled with a left accent marked and faint background to make a contrast with the content.
+ */
+
+/*
+   The breadcrumb paragraph sits between the nav and main..
+*/
+nav + p {
+    background-color: #F3F6FB;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    color: #5B6674;
+    border: 1px solid #E1E7F0;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0.6rem auto 0;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Breadcrumb links: blue colour for clickable trail items */
+nav + p a {
+    color: #1B2A4A;
+    font-weight: 700;
+    background: #FFFFFF;
+    border: 1px solid #DDE6F2;
+    padding: 0.25rem 0.7rem;
+    border-radius: 6px;
+    transition: color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* Breadcrumb link hover: changes to orange  */
+nav + p a:hover {
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #4A6FA5, #2C4A7C);
+    box-shadow: 0 4px 10px rgba(74, 111, 165, 0.25);
+    transform: translateY(-1px);
+}
+
+
+/* ==============================================================
+   9. MAIN CONTENT AREA
+   The primary component encloses page contents.
+   The 1200px has been used to maintain a maximum width that makes content readable on large screens.
+   White background provides a blank canvas on which contents are put.
+   The fadeinUp effect provides a smooth page loading experience.
+   ============================================================ */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem 2.5rem;
+    background-color: #FFFFFF;
+    min-height: 60vh;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.04);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+
+/* ==============================================================
+   10. SECTION STYLING
+   Blocks of related content are placed together in main.
+    There is the visual separation of the areas of various content using margin.
+   ============================================================ */
+
+section {
+    margin-bottom: 2.6rem;
+}
+
+/*
+   Text in the first section introduction is slightly larger, as an emphasis.
+   This is aimed at the paragraph of welcome/introduction on pages.
+*/
+main > section:first-child p {
+    font-size: 1.02rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+
+/* ==============================================================
+   11. CONTINENT GRID LAYOUT (Home Page)
+   The 3-column card layout is constructed with the help of a responsive CSS grid.
+    in the section continent explorer on the home page.
+    This comes after the wireframe with a 3x 2 grid of.
+    destination cards, each containing image, name and CTA button.
+    CSS grid has been selected instead of flexbox since it offers.
+    Height of columns is automatically equal with ease of control of gap.
+   ============================================================ */
+
+/*
+   Grid container: 3 equal columns with consistent gaps.
+   margin-top separates it with the introductory text above.
+*/
+.continent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+    gap: 1.8rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+/*
+   Grid card styling: each of the articles is been transformed into a clean card.
+    the default article formatting to make it smaller.
+    grid layout look compatible with cards.
+*/
+.continent-grid article {
+    background-color: #FFFFFF;
+    border: 1px solid #DEE2E6;
+    border-radius: 14px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Grid card top accent bar is removed for cleaner look */
+.continent-grid article::before {
+    display: none;
+}
+
+/*
+   Grid card hover: lifts up with enhanced shadow.
+   Creates a smooth 3D floating effect on interaction.
+*/
+.continent-grid article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/*
+   Grid card images: filled the top of the card.
+
+*/
+.continent-grid article img {
+    width: 100%;
+    height: 180px;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 14px 14px 0 0;
+    margin: 0;
+    box-shadow: none;
+    transition: transform 0.5s ease;
+}
+
+/*
+   Image zoom effect on card hover: subtle scale increase
+   inside the clipped card boundary creates a lively effect.
+*/
+.continent-grid article:hover img {
+    transform: scale(1.05);
+}
+
+/*
+   Grid card headings: centered the continent name.
+   grid cards use centered layout instead.
+*/
+.continent-grid article h3 {
+    border-left: none;
+    padding: 0.9rem 1.2rem 0.2rem;
+    margin-top: 0;
+    color: #1B2A4A;
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+/*
+   Grid card text: compact description with horizontal padding.
+   The font size is slightly smaller for card context.
+*/
+.continent-grid article p {
+    padding: 0 1.2rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Highlight the main description text under images */
+.continent-grid article p:first-of-type {
+    background: linear-gradient(135deg, rgba(74, 111, 165, 0.08), rgba(244, 169, 64, 0.08));
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    margin: 0.6rem 1.2rem 0.8rem;
+    color: #2F3A4A;
+}
+
+/*
+   button of grid card CTA: the Explore button in the form of a button.
+    mt-auto puts it on the bottom of the flex card which makes sure.
+    every card has a button on it equally high up the side.'
+*/
+.continent-grid article p:last-child {
+    margin-top: auto;
+    padding-bottom: 1.2rem;
+}
+
+/*
+   CTA link within grid cards: styled as a pill button.
+   Uses the orange-to-gold gradient for warmth and visibility.
+*/
+.continent-grid article p:last-child a {
+    display: inline-block;
+    background: linear-gradient(135deg, #4A6FA5, #2C4A7C);
+    color: #FFFFFF;
+    padding: 0.5rem 1.4rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    box-shadow: 0 2px 8px rgba(74, 111, 165, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Grid CTA hover: slight scale and deeper shadow */
+.continent-grid article p:last-child a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(74, 111, 165, 0.4);
+    background: linear-gradient(135deg, #3A5A8C, #1B2A4A);
+    color: #FFFFFF;
+}
+
+
+/* ==============================================================
+   12. ARTICLE / CARD STYLING (Continent & Country Pages)
+   Each destination on continent and country pages is presented
+   in a card with clean, rounded design.
+   
+   This design avoids the heavy "boxy" feel by using
+   border-radius and minimal borders.
+   ============================================================ */
+
+article {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F7FAFF 100%);
+    border: 1px solid #E5ECF4;
+    border-radius: 14px;
+    padding: 1.5rem 1.8rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/*
+   card: preceding: a thinner gradient accent strip on the top.
+    Brings about a warm colour emphasis without the schmaltz.
+    border-image (pushes border-radius to 0).
+    The 3px gradient bar provides a visualization and at the same time maintains.
+    the shape of the cards was round and intact.
+*/
+article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #E8742B, #F4A940);
+    border-radius: 14px 14px 0 0;
+    z-index: 2;
+}
+
+/*
+   Card hover: slight lift and increased shadow.
+    The lift of 4px (instead of 6px) is more sophisticated.
+*/
+article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/*
+   Decorative glow behind cards for a more immersive feel.
+   This stays subtle so content remains readable.
+*/
+article::after {
+    content: '';
+    position: absolute;
+    inset: auto -20% -40% -20%;
+    height: 60%;
+    background: radial-gradient(60% 60% at 50% 50%, rgba(244, 169, 64, 0.18), rgba(74, 111, 165, 0));
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure article content sits above decorative layer */
+article > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==============================================================
+   12B. CONTINENT & COUNTRY PAGE CREATIVE LAYOUT
+   Only works on those pages that have breadcrumbs (nav + p + main).
+    Produces a deeper design by a faint pattern and
+    alternation of columns of images/text on the article sections.
+   ============================================================ */
+
+/* Add a soft background texture only on breadcrumb pages */
+nav + p + main {
+    position: relative;
+    overflow: hidden;
+}
+
+nav + p + main::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(500px 240px at 10% 5%, rgba(74, 111, 165, 0.10), transparent 60%),
+        radial-gradient(520px 260px at 90% 15%, rgba(232, 116, 43, 0.08), transparent 65%),
+        radial-gradient(600px 280px at 30% 90%, rgba(46, 204, 113, 0.08), transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+nav + p + main > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero images on continent/country pages */
+nav + p + main > section > img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 22px;
+    margin: 1.4rem 0 2.2rem;
+    box-shadow: 0 18px 40px rgba(27, 42, 74, 0.18);
+    outline: 1px solid rgba(232, 116, 43, 0.25);
+    outline-offset: -6px;
+    filter: saturate(1.05) contrast(1.02);
+}
+
+/* Article images on continent/country pages (clean stacked layout) */
+main > section > article > img {
+    width: 100%;
+    height: 260px;
+    max-height: none;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 10px 24px rgba(27, 42, 74, 0.14);
+    border: 1px solid rgba(27, 42, 74, 0.08);
+    margin: 0.6rem 0 1rem;
+}
+
+/* Keep headings tight to the top of each card */
+main > section > article > h4 {
+    margin-top: 0;
+}
+
+/* Subtle label styling for the first paragraph after images */
+article > img + p {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    background: rgba(232, 116, 43, 0.12);
+    border: 1px solid rgba(232, 116, 43, 0.25);
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #1B2A4A;
+}
+
+/* Make body text in cards more readable and lively */
+article > p {
+    color: #2F3A4A;
+    line-height: 1.75;
+}
+
+article > p + p {
+    margin-top: 0.75rem;
+}
+
+/* =======================
+   12C. COUNTRY PAGE SPACING
+   Adds clearer separation between image, text, lists, and nav
+   ======================= */
+
+main > section > article {
+    padding: 2rem 2.2rem;
+    margin: 2rem 0;
+    border-radius: 18px;
+}
+
+main > section > article h3 {
+    margin-top: 0.2rem;
+    margin-bottom: 0.9rem;
+}
+
+main > section > article h4 {
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+
+main > section > article ul {
+    margin-top: 0.6rem;
+    margin-bottom: 1.2rem;
+}
+
+main > section > article > p:last-child a[href="#top"] {
+    margin-top: 0.6rem;
+}
+
+/* Make country pages feel more spacious overall */
+nav + p + main > section > hr {
+    width: 80%;
+    margin: 2.4rem auto;
+    opacity: 0.6;
+}
+
+/* About page: clean cards with consistent spacing */
+.about-page main {
+    background: transparent;
+}
+
+.about-page .about-grid {
+    display: block;
+    margin-top: 1.2rem;
+}
+
+.about-page .about-block {
+    background: #F8FAFC;
+    border: 1px solid #E6ECF3;
+    border-radius: 10px;
+    padding: 1.4rem 1.6rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.about-page .about-block::before {
+    content: none;
+}
+
+.about-page h3 {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.about-page main ul {
+    list-style: disc;
+    padding-left: 1.4rem;
+}
+
+.about-page main ul li {
+    background: none;
+    border-left: none;
+    padding: 0.35rem 0;
+    margin-bottom: 0.2rem;
+    font-size: 0.92rem;
+}
+
+/*
+   Explore in detail CTA links embedded on country cards on.
+    continent pages: designed like coloured pill buttons.
+    The gradient is then changed to gold to make it warm.
+*/
+article > p:last-child a {
+    display: inline-block;
+    background: linear-gradient(135deg, #E8742B, #F4A940);
+    color: #FFFFFF;
+    padding: 0.5rem 1.4rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    box-shadow: 0 2px 8px rgba(232, 116, 43, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/*
+   CTA button hover: minor scaling and more intensive shadow.
+    The gradient changes to darker orange as a feedback.
+*/
+article > p:last-child a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(232, 116, 43, 0.35);
+    background: linear-gradient(135deg, #D4651E, #E8742B);
+    color: #FFFFFF;
+}
+
+/*
+   CTA buttons of country cards with different colours.
+    nth-child selectors. This creates visual diversity to the
+    continent pages (similar to the design of the wireframe).
+   - 1st card: green (nature/exploration)
+   - 2nd card: gold (culture/warmth)
+   - 3rd card: blue (ocean/discovery)
+   - 4th card: orange (adventure/energy)
+*/
+section > article:nth-child(odd) > p:last-child a {
+    background: linear-gradient(135deg, #2ECC71, #27AE60);
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.25);
+}
+
+section > article:nth-child(odd) > p:last-child a:hover {
+    background: linear-gradient(135deg, #27AE60, #1E8449);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.35);
+}
+
+section > article:nth-child(even) > p:last-child a {
+    background: linear-gradient(135deg, #4A6FA5, #2C4A7C);
+    box-shadow: 0 2px 8px rgba(74, 111, 165, 0.25);
+}
+
+section > article:nth-child(even) > p:last-child a:hover {
+    background: linear-gradient(135deg, #3A5A8C, #1B2A4A);
+    box-shadow: 0 4px 15px rgba(74, 111, 165, 0.35);
+}
+
+
+/* ==============================================================
+   13. IMAGE STYLING
+   Images are made responsive and visually polished:
+   ============================================================ */
+
+img {
+    max-width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    margin: 1rem 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+/*
+   Image hover: slight brightness increase and deeper shadow.
+   filter: brightness(1.04) subtly lightens the image on hover
+   making it feel alive and interactive.
+*/
+img:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    filter: brightness(1.04);
+}
+
+
+/* ==============================================================
+   14. KEY FACTS STYLING
+   The Key Facts sections on continent pages have a subtle
+   coloured background in order to make them visually distinct.
+    content next to it, and it conforms to the wireframe design.
+    This is aimed at the unordered list which is preceded by a "Key Facts.
+   ============================================================ */
+
+/*
+   Key facts container: incorporates an HTML used class.
+    Dark green-colored background and left accent border.
+*/
+.key-facts {
+    background-color: #F0F8F0;
+    border-left: 4px solid #2ECC71;
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0 1.5rem;
+}
+
+/* Key facts list items: no extra background needed since
+   the container already has the coloured background */
+.key-facts li {
+    background-color: transparent;
+    border-left: none;
+    padding: 0.4rem 0;
+    border-radius: 0;
+}
+
+/* Removed the hover effect on key facts items for cleaner look */
+.key-facts li:hover {
+    background-color: transparent;
+    transform: none;
+    border-left: none;
+}
+
+
+/* ==============================================================
+   15. LIST STYLING
+   Bullet points within the body are custom styled.
+    In case of default, bullets are eliminated and a is used.
+    coloured left side and slight background.
+    Navigation lists (within <nav>s) are not.
+   ============================================================ */
+
+/* Remove default bullet points from content lists */
+main ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+/*
+   Each list item are styled 
+*/
+main ul li {
+    padding: 0.5rem 1rem 0.5rem 1.1rem;
+    margin-bottom: 0.3rem;
+    background-color: #F7FAF7;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.92rem;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease, transform 0.2s ease;
+}
+
+/*
+   List item hover: slightly brighter background, the left
+   border shifts to orange, and a tiny right shift creates
+   a subtle interactive feel.
+*/
+main ul li:hover {
+    background-color: #EFF7EF;
+    transform: translateX(3px);
+}
+
+/* ==============================================================
+   15B. JUMP LINKS (Explore Major Destinations)
+   Compact, pill-style links to avoid long list boxes.
+   ============================================================ */
+
+.jump-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0.6rem 0 1.4rem;
+    padding-left: 0;
+}
+
+.jump-links li {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+}
+
+.jump-links li:hover {
+    background: transparent;
+    transform: none;
+}
+
+.jump-links a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.55rem 1.2rem;
+    border-radius: 6px;
+    background: #F3F6FB;
+    border: 1px solid #DDE6F2;
+    color: #1B2A4A;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 6px rgba(27, 42, 74, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.jump-links a:hover {
+    background: linear-gradient(135deg, #E8742B, #F4A940);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(232, 116, 43, 0.25);
+}
+
+
+/* ==============================================================
+   16. HORIZONTAL RULE STYLING
+   Custom <hr> elements replace the default browser line.
+   Gradient comes in use with the site.
+    colour scheme (orange to blue to green) of a.
+    effect of divider between sections in decoration.
+    Its width is narrow and middle-grounded to have a sophisticated appearance.
+   ============================================================ */
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, #E8742B, #4A6FA5, #2ECC71);
+    margin: 2rem auto;
+    border-radius: 2px;
+    width: 70%;
+    opacity: 0.5;
+}
+
+
+/* ==============================================================
+   17. CONTACT PAGE LAYOUT
+   The contact page follows a two column flexbox design:
+    right side displays, left side contains the form of the message.
+    contact details and an inbuilt map/illustration.
+    This is in line with the wireframe with form and info placed adjacent to each other.
+    Flexbox was developed due to the flexibility of alignment.
+    the stacking capability on smaller screens is easy.
+   ============================================================ */
+
+/*
+   Contact layout wrapper: horizontal flex with gap.
+   align-items: flex-start prevents stretching to equal height.
+*/
+.contact-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+/*
+   Contact form wrapper: takes up the larger left portion.
+   flex: 1 allows it to grow and fill available space.
+*/
+.contact-form {
+    flex: 1;
+    min-width: 0;
+}
+
+/*
+   Contact information panel:
+*/
+.contact-info {
+    flex: 0 0 340px;
+    background-color: #F8F9FA;
+    padding: 1.5rem 1.8rem;
+    border-radius: 14px;
+    border: 1px solid #DEE2E6;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* Contact info heading: styled without left border for
+   this specific context since it sits inside a card */
+.contact-info h3 {
+    border-left: none;
+    color: #1B2A4A;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-left: 0;
+}
+
+/* Contact info paragraphs: slightly smaller text */
+.contact-info p {
+    font-size: 0.9rem;
+    margin-bottom: 0.7rem;
+}
+
+/* Contact info links: blue colour for email, phone etc. */
+.contact-info a {
+    color: #4A6FA5;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    color: #E8742B;
+}
+
+/* Embedded map placeholder styling within contact info */
+.contact-map {
+    background-color: #E8EEF4;
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+    margin-top: 1rem;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #CCC;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    border: 0;
+    display: block;
+}
+
+
+/* ==============================================================
+   18. CONTACT FORM STYLING
+   The shape is made to be simple, welcoming and user friendly.
+    Input states are animated focus states using coloured.
+    border effects and glow effects to provide clear visual feedback.
+   ============================================================ */
+
+/* Form container styling */
+form {
+    background-color: #FAFBFC;
+    padding: 2rem;
+    border-radius: 14px;
+    border: 1px solid #E8EEF4;
+    margin: 1rem 0 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+/*
+   Labels: styled with Poppins font and blue colour.
+   
+*/
+label {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: #1B2A4A;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+/*
+   Text and email inputs: full width with generous padding.
+   The border transitions colour on focus for visual feedback.
+   border-radius: 8px creates a modern rounded shape.
+*/
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.7rem 1rem;
+    border: 2px solid #DEE2E6;
+    border-radius: 8px;
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 0.92rem;
+    color: #1A1A2E;
+    background-color: #FFFFFF;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*
+   Input focus: orange border with a warm glowing shadow.
+   Provides clear visual feedback when the user is typing.
+*/
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #E8742B;
+    box-shadow: 0 0 0 3px rgba(232, 116, 43, 0.1);
+    outline: none;
+}
+
+/*
+   Placeholder text styling: lighter colour and italic
+   to differentiate from actual user input.
+*/
+input::placeholder,
+textarea::placeholder {
+    color: #AAA;
+    font-style: italic;
+}
+
+/*
+   Textarea: same styling as inputs but taller.
+   resize: vertical allows users to make it taller
+   but prevents horizontal resizing that could break layout.
+*/
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.7rem 1rem;
+    border: 2px solid #DEE2E6;
+    border-radius: 8px;
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 0.92rem;
+    color: #1A1A2E;
+    background-color: #FFFFFF;
+    resize: vertical;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Textarea focus: same warm glow as text inputs */
+textarea:focus {
+    border-color: #E8742B;
+    box-shadow: 0 0 0 3px rgba(232, 116, 43, 0.1);
+    outline: none;
+}
+
+/*
+   Submit button: prominent gradient button with animation.
+*/
+input[type="submit"] {
+    background: linear-gradient(135deg, #E8742B, #F4A940);
+    color: #FFFFFF;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    border-radius: 25px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    box-shadow: 0 3px 10px rgba(232, 116, 43, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulseGlow 2.5s infinite;
+    margin-top: 0.5rem;
+}
+
+/*
+   Submit hover: lifts up with stronger shadow.
+   The pulse animation is overridden by the hover shadow.
+*/
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(232, 116, 43, 0.35);
+    animation: none;
+}
+
+/* Submit active/pressed: returns to baseline position */
+input[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(232, 116, 43, 0.2);
+}
+
+
+/* ==============================================================
+   19. CTA BUTTON STYLING
+   About page call-to-action links should be in the form of a button.
+   and there are other pages where large navigation is required.
+
+   ============================================================ */
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.cta-buttons a {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Primary CTA: orange gradient (Explore Destinations) */
+.cta-buttons a:first-child {
+    background: linear-gradient(135deg, #E8742B, #F4A940);
+    color: #FFFFFF;
+    box-shadow: 0 3px 10px rgba(232, 116, 43, 0.25);
+}
+
+.cta-buttons a:first-child:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(232, 116, 43, 0.35);
+    color: #FFFFFF;
+}
+
+/* Secondary CTA: blue outlined style (Contact Us) */
+.cta-buttons a:last-child {
+    background: linear-gradient(135deg, #4A6FA5, #2C4A7C);
+    color: #FFFFFF;
+    box-shadow: 0 3px 10px rgba(74, 111, 165, 0.25);
+}
+
+.cta-buttons a:last-child:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(74, 111, 165, 0.35);
+    color: #FFFFFF;
+}
+
+
+/* ==============================================================
+   20. IFRAME / EMBEDDED VIDEO STYLING
+   The YouTube in-frame is responsified and centred.
+   ============================================================ */
+
+iframe {
+    display: block;
+    max-width: 100%;
+    margin: 1.5rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+/* Responsive video wrapper for YouTube embeds */
+.video-embed {
+    position: relative;
+    width: 100%;
+    max-width: 920px;
+    margin: 1.5rem auto 0;
+    padding-top: 56.25%;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 26px rgba(27, 42, 74, 0.18);
+}
+
+.video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 14px;
+}
+
+
+/* ==============================================================
+   21. VIDEO SECTION STYLING
+   The home page has a section of video, which is highlighting.
+    treatment blue tinted background, centred text,
+    and corners rounded to look like a feature block.
+   ============================================================ */
+
+main > section:last-of-type {
+    text-align: center;
+    background: linear-gradient(135deg, #EEF2F7, #E0E8F0);
+    padding: 2rem 1.5rem;
+    border-radius: 14px;
+    margin-top: 2rem;
+    border: 1px solid #D6DEE8;
+}
+
+/* Centre paragraphs within the video section */
+main > section:last-of-type p {
+    text-align: center;
+}
+
+
+/* ==============================================================
+   22. FOOTER SECTION
+   The footer is similar to the header in terms of a deep blue gradient.
+    position relative allows the decorative wave of the wave of the next generation to pass.
+    at the upper-left of the footer, and forming a clean impression.
+    change of the main content area.
+    The text with copyright is also designed in smaller fonts under the contact information.
+   ============================================================ */
+
+footer {
+    background: linear-gradient(135deg, #1B2A4A 0%, #2C4A7C 50%, #1B2A4A 100%);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 2rem 2rem 1.5rem;
+    margin-top: 0;
+    position: relative;
+}
+
+/*
+   Footer ::before: creates a decorative wave/curve at the top
+   of the footer. This smooth transition between the white
+   content area and the dark footer is achieved with clip-path.
+*/
+footer::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(135deg, #1B2A4A 0%, #2C4A7C 50%, #1B2A4A 100%);
+    clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+/* Hide the default hr inside footer (wave replaces it) */
+footer hr {
+    display: none;
+}
+
+/* Footer text styling: slightly translucent white */
+footer p {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.5px;
+}
+
+/* Copyright text: smaller and more subtle */
+footer p:last-child {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+}
+
+/* Footer links: bright white that shifts to gold on hover */
+footer a {
+    color: #FFFFFF;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #F4A940;
+}
+
+
+/* ==============================================================
+   23. UTILITY NAVIGATION LINKS
+   The Back to top, Back to All Continents and so on.
+    The navigation helper links are designed in the form of pill buttons.
+    These have simple navigation on lengthy pages.
+   ============================================================ */
+
+/*
+   Back to top and home links: pill-shaped utility buttons
+   with blue background and white text.
+*/
+main > section p > a[href="#top"] {
+    display: inline-block;
+    padding: 0.4rem 1.1rem;
+    background: linear-gradient(135deg, #4A6FA5, #2C4A7C);
+    color: #FFFFFF;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin: 0.3rem;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover: darker gradient and slight lift */
+main > section p > a[href="#top"]:hover {
+    background: linear-gradient(135deg, #3A5A8C, #1B2A4A);
+    transform: translateY(-2px);
+    color: #FFFFFF;
+}
+
+/*
+   Back navigation links (Back to Asia, Back to Europe etc.)
+   Styled as subtle outlined pill buttons for secondary navigation.
+*/
+.back-nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.back-nav a {
+    display: inline-block;
+    padding: 0.5rem 1.3rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-nav a:first-child {
+    background: linear-gradient(135deg, #2ECC71, #27AE60);
+    color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.25);
+}
+
+.back-nav a:first-child:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.35);
+    color: #FFFFFF;
+}
+
+.back-nav a:last-child {
+    background: linear-gradient(135deg, #F4A940, #E8742B);
+    color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(244, 169, 64, 0.25);
+}
+
+.back-nav a:last-child:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(244, 169, 64, 0.35);
+    color: #FFFFFF;
+}
+
+
+/* ==============================================================
+   24. SELECTION HIGHLIGHT STYLING
+  On the page, when the user selects/highlights text on the page, the
+    selection background and text colours are similar to the site.
+    palette, putting a sense of sophistication in the game.
+   ============================================================ */
+
+::selection {
+    background-color: #4A6FA5;
+    color: #FFFFFF;
+}
+
+::-moz-selection {
+    background-color: #4A6FA5;
+    color: #FFFFFF;
+}
+
+
+/* ==============================================================
+   25. RESPONSIVE DESIGN - TABLET (max-width: 768px)
+   The adjustments made for tablet screens (iPad, etc.).
+   ============================================================ */
+
+@media screen and (max-width: 768px) {
+    nav + p + main > section > img {
+        max-height: 340px;
+    }
+
+    /* Reduce header padding and heading size */
+    header {
+        padding: 2rem 1.5rem 1.8rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    /* Reduce section heading sizes proportionally */
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    /* More compact navigation links */
+    nav ul li a {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.84rem;
+        letter-spacing: 1px;
+    }
+
+    /* Reduce main content padding */
+    main {
+        padding: 1.5rem 1.5rem 2rem;
+    }
+
+    /* Continent grid: 2 columns on tablet instead of 3 */
+    .continent-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.4rem;
+    }
+
+    /* Slightly smaller card padding */
+    article {
+        padding: 1.4rem;
+    }
+
+    /* Contact layout stacks vertically on tablet */
+    .contact-layout {
+        flex-direction: column;
+    }
+
+    /* Contact info takes full width when stacked */
+    .contact-info {
+        flex: 1 1 100%;
+    }
+
+    /* Form inputs fill available width */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        max-width: 100%;
+    }
+
+    /* Reduce form padding */
+    form {
+        padding: 1.5rem;
+    }
+
+    /* Reduce image max height on tablet */
+    img {
+        max-height: 280px;
+    }
+
+    main > section > article {
+        padding: 1.6rem;
+        margin: 1.6rem 0;
+    }
+}
+
+
+/* ==============================================================
+   26. RESPONSIVE DESIGN - MOBILE (max-width: 480px)
+   Adjustments for small phone screens.
+   ============================================================ */
+
+@media screen and (max-width: 480px) {
+    /* Stack image + text layout on mobile */
+    main > section > article {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    main > section > article > img {
+        height: 210px;
+    }
+
+    nav + p + main > section > img {
+        max-height: 260px;
+    }
+
+    /* Compact header for small screens */
+    header {
+        padding: 1.5rem 1rem 1.2rem;
+    }
+
+    /* Smaller heading sizes for mobile readability */
+    header h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    header p {
+        font-size: 0.88rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.05rem;
+        padding-left: 0.6rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    /*
+       Navigation wraps to multiple rows on small screens.
+       flex-wrap: wrap allows items to flow to the next line.
+       justify-content: center keeps them centred.
+    */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.78rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* Minimal content padding on mobile */
+    main {
+        padding: 1rem 1rem 1.5rem;
+    }
+
+    /* Continent grid: single column on mobile */
+    .continent-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    /* Compact cards on mobile */
+    article {
+        padding: 1.1rem;
+        margin: 1.2rem 0;
+    }
+
+    main > section > article {
+        padding: 1.2rem;
+        margin: 1.2rem 0;
+    }
+
+    /* Smaller form padding */
+    form {
+        padding: 1rem;
+    }
+
+    /* Compact footer */
+    footer {
+        padding: 1.5rem 1rem 1.2rem;
+    }
+
+    /* Slightly smaller body text on mobile */
+    p {
+        font-size: 0.88rem;
+    }
+
+    /* Reduce breadcrumb padding */
+    nav + p {
+        padding: 0.5rem 1rem;
+        font-size: 0.78rem;
+    }
+
+    /* Full-width dividers on mobile */
+    hr {
+        width: 90%;
+    }
+
+    /* Reduce image max height on mobile */
+    img {
+        max-height: 220px;
+    }
+
+    /* Grid card images: slightly shorter on mobile */
+    .continent-grid article img {
+        height: 150px;
+        max-height: 150px;
+    }
+
+    /* CTA buttons stack vertically on mobile */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Contact info full width */
+    .contact-info {
+        flex: 1 1 100%;
+    }
+
+    /* Back nav buttons wrap nicely */
+    .back-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

@@ -1,0 +1,275 @@
+﻿<!--Name - Dewshini Mendis -->
+<!--Student_ID - 10675332 -->
+<!--Validated -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+       Here is the  basic meta settings for correct text display and responsiveness.
+        - charset UTF-8:  This supports special characters like accents.
+        - viewport: This makes the layout adapt to mobile and desktop screens.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+        Here is the page title that shown in the browser tab.
+        This includes country name + website name for clarity and simple SEO.
+    -->
+    <title>France - Explore The World</title>
+
+    <!--
+        External CSS stylesheet link
+        This single CSS file controls all visual styling and layout
+        across the entire website as required by the assignment
+    -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+    
+    <!-- ==================== HEADER SECTION ==================== -->
+    <!-- 
+        For this country page,eader shows the site name and a short tagline.
+        This area stays consistent across all pages in order to give a unified look.
+    -->
+    <header>
+        <!-- This is the main site heading. Only one <h1> per page for proper structure. -->
+        <h1>Explore The World</h1>
+        <!-- This is the short description of what this specific page is about. -->
+        <p>Discover the wonders of France</p>
+    </header>
+    
+    <!-- ==================== NAVIGATION SECTION ==================== -->
+    <!-- 
+        This is the main navigation menu.
+        This lets users quickly move between Home, About, and Contact pages.
+    -->
+    <nav>
+        <ul>
+            <!-- This link back to the home page with continent overview. -->
+            <li><a href="index.html">Home</a></li>
+            <!-- This link to the About page that explains the purpose of the site. -->
+            <li><a href="about.html">About</a></li>
+            <!-- This link to the Contact page for email, address, etc. -->
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- ==================== BREADCRUMB NAVIGATION ==================== -->
+    <!-- 
+        Breadcrumb shows the path inside the site (Home → Europe → France).
+        This assists users understand where they are and go back one level easily.
+    -->
+    <p><a href="index.html">Home</a> &gt; <a href="europe.html">Europe</a> &gt; France</p>
+    
+    <!-- ==================== MAIN CONTENT SECTION ==================== -->
+    <!-- 
+        This wraps all country-specific content for France.
+        This is the primary area that screen readers and search engines focus on.
+    -->
+    <main>
+        
+        <!-- This is the wrapper section for all France details. -->
+        <section>
+            <!-- This is the high-level heading that describe what this page covers. -->
+            <h2>France - The Epitome of Art, Culture, and Gastronomy</h2>
+            
+            <!-- 
+                This is the hero image for the country.
+                This is a large banner that visually introduces France to the visitor.
+            -->
+            <img src="Cities/paris.jpg" alt="Eiffel Tower with Paris cityscape and French countryside" width="800" height="500">
+            
+            <!-- ===== Introduction subsection  ===== -->
+            <!-- This is the short overview paragraphs giving general context about France. -->
+            <h3>Introduction</h3>
+            
+            <p>France is one of the most visited countries in the world, celebrated for its rich history, cultural influence, and timeless elegance. From medieval towns to modern cities, France offers a remarkable blend of tradition and innovation.</p>
+            
+            <p>Visitors are drawn to its iconic landmarks, world-renowned museums, scenic countryside, and exceptional cuisine. Whether exploring historic castles, relaxing in vineyards, or enjoying café culture, France provides a diverse and unforgettable travel experience.</p>
+            
+            <!-- ===== Quick facts list ===== -->
+            <!-- This is a bullet list with key facts  where a traveler or student might need. -->
+            <h3>Quick Facts</h3>
+            <ul class="key-facts">
+                <li><strong>Capital:</strong> Paris</li>
+                <li><strong>Population:</strong> Approximately 67 million</li>
+                <li><strong>Language:</strong> French</li>
+                <li><strong>Currency:</strong> Euro (€)</li>
+                <li><strong>Best Time to Visit:</strong> April–June and September–October</li>
+            </ul>
+            
+            <hr>
+            
+            <!-- ==================== ON-PAGE NAVIGATION ==================== -->
+            <!-- 
+                Here are the internal links to jump directly to sections further down the page.
+                This uses anchor links that point to article IDs (example, #paris).
+            -->
+            <h3>Explore Major Destinations</h3>
+            
+            <p>Jump to a specific destination</p>\r\n            <ul class="jump-links">
+                <li><a href="#paris">Paris</a></li>
+                <li><a href="#versailles">Versailles</a></li>
+                <li><a href="#provence">Provence</a></li>
+                <li><a href="#french-riviera">French Riviera</a></li>
+            </ul>
+            
+            <hr>
+            
+            <!-- ==================== PARIS SECTION ==================== -->
+            <!-- 
+                Every main destination is wrapped in an <article>.
+                This makes each section self-contained and simple to reuse or move.
+            -->
+            <article id="paris">
+                <!-- Here is the destination name, with an icon to give visual interest. -->
+                <h3>Paris 🗼</h3>
+                
+                <!-- Here is the main image for Paris highlights. -->
+                <img src="Cities/paris.jpg" alt="Eiffel Tower, Louvre Museum, and Parisian streets" width="600" height="400">
+                
+                <!-- Here is the basic detail like the administrative region. -->
+                <p><strong>Region:</strong> Île-de-France</p>
+                
+                <!-- Here are the description paragraphs explaining why this destination is crucial. -->
+                <p>Paris, often called the “City of Light,” is the cultural and artistic heart of France. It is known for its historic monuments, grand boulevards, and vibrant café culture.</p>
+                
+                <p>Travelers can admire world-famous artworks at the Louvre, enjoy scenic walks along the Seine, and experience the city’s reputation for fashion, romance, and fine dining.</p>
+                
+                <!-- Here are the key attractions listed for quick scanning. -->
+                <h4>Must-See Attractions:</h4>
+                <ul>
+                    <li>Eiffel Tower - Iconic landmark offering panoramic views</li>
+                    <li>Louvre Museum - Home to the Mona Lisa and thousands of artworks</li>
+                    <li>Notre-Dame Cathedral - Historic Gothic cathedral</li>
+                    <li>Arc de Triomphe - Monument honoring French history</li>
+                    <li>Sacré-Cœur - Basilica overlooking Paris from Montmartre</li>
+                </ul>
+                
+                <!-- This is the link that scrolls the page back up to the top navigation area. -->
+                <p><a href="#top">↑ Back to top</a></p>
+            </article>
+            
+            <hr>
+            
+            <!-- ==================== VERSAILLES SECTION ==================== -->
+            <article id="versailles">
+                <h3>Palace of Versailles 👑</h3>
+                
+                <img src="Cities/versailles.jpg" alt="Palace of Versailles with ornate gardens and Hall of Mirrors" width="600" height="400">
+                
+                <p><strong>Region:</strong> Île-de-France (near Paris)</p>
+                
+                <p>The Palace of Versailles symbolizes the power and luxury of the French monarchy. Originally a royal hunting lodge, it was transformed into an extravagant palace under King Louis XIV.</p>
+                
+                <p>Visitors can explore lavishly decorated rooms, walk through grand gardens, and learn about key moments in European history, including the signing of the Treaty of Versailles.</p>
+                
+                <h4>Must-See Attractions:</h4>
+                <ul>
+                    <li>Hall of Mirrors - Famous gallery with reflective arches</li>
+                    <li>King's Grand Apartments - Lavish royal living spaces</li>
+                    <li>Gardens of Versailles - Extensive landscaped gardens</li>
+                    <li>Grand Trianon - Elegant retreat for royalty</li>
+                    <li>Marie-Antoinette's Estate - Queen’s private village</li>
+                </ul>
+                
+                <p><a href="#top">↑ Back to top</a></p>
+            </article>
+            
+            <hr>
+            
+            <!-- ==================== PROVENCE SECTION ==================== -->
+            <article id="provence">
+                <h3>Provence 🌻</h3>
+                
+                <img src="Cities/provence.jpg" alt="Lavender fields, medieval villages, and Provençal countryside" width="600" height="400">
+                
+                <p><strong>Region:</strong> Southeastern France</p>
+                
+                <p>Provence is known for its lavender fields, sunny climate, and relaxed Mediterranean lifestyle. The region is rich in Roman history and charming rural landscapes.</p>
+                
+                <p>Visitors can explore ancient towns, taste local wines, and enjoy traditional Provençal cuisine. Provence offers a peaceful contrast to France’s busy cities.</p>
+                
+                <h4>Must-See Attractions:</h4>
+                <ul>
+                    <li>Lavender Fields - Seasonal purple landscapes</li>
+                    <li>Palais des Papes - Historic papal palace in Avignon</li>
+                    <li>Gordes - Scenic hilltop village</li>
+                    <li>Pont du Gard - Roman aqueduct bridge</li>
+                    <li>Les Baux-de-Provence - Medieval stone village</li>
+                </ul>
+                
+                <p><a href="#top">↑ Back to top</a></p>
+            </article>
+            
+            <hr>
+            
+            <!-- ==================== FRENCH RIVIERA SECTION ==================== -->
+            <article id="french-riviera">
+                <h3>French Riviera ⛱️</h3>
+                
+                <img src="Cities/french-riviera.jpg" alt="Nice promenade, Monaco harbor, and Mediterranean coastline" width="600" height="400">
+                
+                <p><strong>Region:</strong> Southeastern coast along Mediterranean</p>
+                
+                <p>The French Riviera, also known as the Côte d’Azur, is famous for its turquoise waters, luxury resorts, and glamorous lifestyle.</p>
+                
+                <p>This coastal region attracts visitors with beautiful beaches, elegant seaside towns, and international events such as the Cannes Film Festival.</p>
+                
+                <h4>Must-See Attractions:</h4>
+                <ul>
+                    <li>Promenade des Anglais - Seafront walkway in Nice</li>
+                    <li>Monaco - Luxury principality and Formula 1 Grand Prix</li>
+                    <li>Cannes - City known for its film festival</li>
+                    <li>Saint-Tropez - Stylish beach destination</li>
+                    <li>Antibes - Historic town with art museums</li>
+                </ul>
+                
+                <p><a href="#top">↑ Back to top</a></p>
+            </article>
+            
+            <hr>
+            
+            <!-- ==================== TRAVEL TIPS SECTION ==================== -->
+            <!-- 
+                Here is the Practical tips section: This gives visitors quick guidance on language,
+                transport, dining culture, and other useful info.
+            -->
+            <section>
+                <h3>Travel Tips for France</h3>
+                
+                <p>Understanding local customs and travel practices will help make your trip to France more enjoyable.</p>
+                
+                <ul>
+                    <li><strong>Language:</strong> Learning basic French phrases is appreciated</li>
+                    <li><strong>Transportation:</strong> High-speed trains connect major cities efficiently</li>
+                    <li><strong>Dining:</strong> Meals are meant to be enjoyed slowly</li>
+                    <li><strong>Tipping:</strong> Service charge is included; small tips are optional</li>
+                    <li><strong>Museums:</strong> Free entry is often available on the first Sunday of each month</li>
+                </ul>
+            </section>
+            
+            <hr>
+            
+            <!-- Here are the simple navigation links to move back up one level or home. -->
+            <p class="back-nav"><a href="europe.html">&larr; Back to Europe</a> <a href="index.html">Home</a></p>
+            
+        </section>
+        
+    </main>
+    
+    <!-- ==================== FOOTER SECTION ==================== -->
+    <!-- 
+        Here is a standard footer used across the site.
+        This contains a simple contact email and the new site name.
+    -->
+    <footer>
+        <hr>
+        <p>Email: <a href="mailto:contact@email.com">contact@email.com</a> | Explore.org</p>
+        <p>Copyright &copy; 2026 Explore the World</p>
+    </footer>
+    
+</body>
+</html>

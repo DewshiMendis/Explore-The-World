@@ -1,0 +1,242 @@
+﻿<!--Name - Dewshini Mendis -->
+<!--Student_ID - 10675332 -->
+<!--Validated -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        UTF-8 character encoding
+        In the viewport, it makes the layout responsive on both phones and desktops.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+        Title is shown in the browser tab.
+        Combines the country name with the website name.
+    -->
+    <title>United Kingdom - Explore The World</title>
+
+    <!--
+        External CSS stylesheet link
+        This single CSS file controls all visual styling and layout
+        across the entire website as required by the assignment
+    -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+    <!-- ================= HEADER SECTION ================= -->
+    <!-- 
+        Header displays the name of the global site, and a brief tagline on this particular country page.
+    -->
+    <header>
+        <h1>Explore The World</h1>
+        <p>Discover the wonders of the United Kingdom</p>
+    </header>
+
+    <!-- =================== NAVIGATION SECTION ==================== -->
+    <!-- 
+        The main navigation menu.
+        Assists the user to navigate fast to other central pages of the site.
+    -->
+    <nav>
+        <ul>
+            <!-- Link back to the home page with all continents. -->
+            <li><a href="index.html">Home</a></li>
+            <!-- Link to About page explaining the purpose of the website. -->
+            <li><a href="about.html">About</a></li>
+            <!-- Link to Contact page with email and other details. -->
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================== BREADCRUMB NAVIGATION =================== -->
+    <!-- 
+        Breadcrumb path showing where does this page sit in the sites hierarchy.
+        Home → Europe → United Kingdom.
+    -->
+    <p><a href="index.html">Home</a> &gt; <a href="europe.html">Europe</a> &gt; United Kingdom</p>
+
+    <!-- ==================== MAIN CONTENT SECTION ==================== -->
+    <!-- 
+        All country specific information to United Kingdom is placed within the <main> element.
+        This enhances accessibility and points out to the main area of content.
+    -->
+    <main>
+        <!-- 
+           Introduction section which is on top and which combines the completeness of the UK guide:
+            The image, introduction, facts, destination areas, and travel tips..
+        -->
+        <section>
+            <!-- The Descriptive page of heading for this country UK. -->
+            <h2>United Kingdom - History, Culture, and Scenic Landscapes</h2>
+
+            <!-- Hero image giving a visual overview of the UK. -->
+            <img src="Cities/london.jpg" alt="Big Ben, Edinburgh Castle, and Lake District" width="800" height="500">
+
+            <!-- === Introduction of the subsection === -->
+            <!-- General background information on the UK.. -->
+            <h3>Introduction</h3>
+            <p>The United Kingdom is a nation rich in history, culture, and natural beauty. Comprising England, Scotland, Wales, and Northern Ireland, it offers vibrant cities, historic castles, rolling countryside, and stunning coastal scenery.</p>
+            <p>Visitors can explore iconic landmarks such as Big Ben, Buckingham Palace, Edinburgh Castle, and Stonehenge. The UK’s diverse regions offer unique traditions, local cuisines, festivals, and landscapes from highlands to lakes, making it a fascinating destination for travelers.</p>
+
+            <!-- == Quick facts list == -->
+            <!-- Important details that a visitor or a student might require. -->
+            <h3>Quick Facts</h3>
+            <ul class="key-facts">
+                <li><strong>Capital</strong>: London</li>
+                <li><strong>Population</strong>: Approximately 67 million</li>
+                <li><strong>Language</strong>: English</li>
+                <li><strong>Currency</strong>: Pound Sterling (Â£)</li>
+                <li><strong>Best Time to Visit</strong>: May to September</li>
+            </ul>
+
+            <hr>
+
+            <!-- ==================== ON-PAGE NAVIGATION ==================== -->
+            <!-- 
+               Internal navigation to skip to the main destination parts below.
+                Every connection has an id of the article (e.g., #london, #edinburgh).. 
+            -->
+            <h3>Explore Major Destinations</h3>
+            <p>Jump to a specific destination</p>\r\n            <ul class="jump-links">
+                <li><a href="#london">London</a></li>
+                <li><a href="#edinburgh">Edinburgh</a></li>
+                <li><a href="#cardiff">Cardiff</a></li>
+                <li><a href="#lake-district">Lake District</a></li>
+            </ul>
+
+            <hr>
+
+            <!-- ============= LONDON SECTION ============= -->
+            <!-- 
+                The destinations are enclosed in an article to allow self-containment.
+                This part includes description and major sights of London.
+            -->
+            <article id="london">
+                <h3>London</h3>
+                <img src="Cities/london.jpg" alt="Big Ben, London Eye, and Tower Bridge" width="600" height="400">
+                <p><strong>Region</strong>: England</p>
+                <p>London is the capital city of the UK, blending historic landmarks with modern attractions. From the iconic Big Ben and Tower of London to the vibrant West End theatres, London is a cultural hub.</p>
+                <p>Visitors can enjoy world-class museums like the British Museum, stroll along the Thames, explore royal palaces, and experience diverse cuisine. London’s energy and history make it one of the world’s top travel destinations.</p>
+
+                <h4>Must-See Attractions</h4>
+                <ul>
+                    <li>Big Ben & Houses of Parliament - Iconic symbol of London</li>
+                    <li>Tower of London - Historic castle and former royal palace</li>
+                    <li>London Eye - Panoramic view of the city</li>
+                    <li>Buckingham Palace - Royal residence and Changing of the Guard</li>
+                    <li>British Museum - Extensive collection of world artifacts</li>
+                </ul>
+                <p><a href="#top">Back to top</a></p>
+            </article>
+
+            <hr>
+
+            <!-- ==================== EDINBURGH SECTION ==================== -->
+            <!-- 
+                Article about Edinburgh, focusing on history, culture, and festivals
+            -->
+            <article id="edinburgh">
+                <h3>Edinburgh</h3>
+                <img src="Cities/edinburgh.jpg" alt="Edinburgh Castle and Royal Mile" width="600" height="400">
+                <p><strong>Region</strong>: Scotland</p>
+                <p>Edinburgh, Scotland’s capital, is famous for its historic and cultural landmarks. The Edinburgh Castle dominates the skyline, and the Royal Mile offers historic streets filled with shops, pubs, and museums.</p>
+                <p>The city hosts the world-renowned Edinburgh Festival and Fringe Festival each summer. Visitors can hike Arthur’s Seat for stunning views and enjoy Scottish cuisine and whisky in traditional establishments.</p>
+
+                <h4>Must-See Attractions</h4>
+                <ul>
+                    <li>Edinburgh Castle - Historic fortress with panoramic city views</li>
+                    <li>Royal Mile - Medieval street lined with shops and historic sites</li>
+                    <li>Holyrood Palace - Official royal residence in Scotland</li>
+                    <li>Arthur's Seat - Ancient volcano with panoramic views</li>
+                    <li>National Museum of Scotland - Exhibits on history, science, and culture</li>
+                </ul>
+                <p><a href="#top">Back to top</a></p>
+            </article>
+
+            <hr>
+
+            <!-- ========== CARDIFF SECTION ====== -->
+            <!-- 
+                Article on Cardiff, highlighting culture and local attractions.
+            -->
+            <article id="cardiff">
+                <h3>Cardiff</h3>
+                <img src="Cities/cardiff.jpg" alt="Cardiff Castle and Millennium Stadium" width="600" height="400">
+                <p><strong>Region</strong>: Wales</p>
+                <p>Cardiff is the capital of Wales, known for its mix of historic and modern attractions. Cardiff Castle offers a glimpse into medieval history, while the city center is lively with shops, restaurants, and arts venues.</p>
+                <p>Cardiff Bay provides waterfront entertainment, and the Principality Stadium hosts sporting events and concerts. The city is a cultural hub with museums, theaters, and music festivals throughout the year.</p>
+
+                <h4>Must-See Attractions</h4>
+                <ul>
+                    <li>Cardiff Castle - Historic medieval and Victorian castle</li>
+                    <li>Millennium Stadium (Principality Stadium) - Iconic sports arena</li>
+                    <li>Cardiff Bay - Waterfront with restaurants and attractions</li>
+                    <li>National Museum Cardiff - Art, natural history, and archaeology</li>
+                    <li>St Fagans National Museum of History - Open-air museum of Welsh life</li>
+                </ul>
+                <p><a href="#top">Back to top</a></p>
+            </article>
+
+            <hr>
+
+            <!-- ========== LAKE DISTRICT SECTION============ -->
+            <!-- 
+                Article on the Lake District, focusing on natural scenery and outdoor activities.
+            -->
+            <article id="lake-district">
+                <h3>Lake District</h3>
+                <img src="Cities/lake-district.jpg" alt="Lakes and mountains in Lake District National Park" width="600" height="400">
+                <p><strong>Region</strong>: Northwest England</p>
+                <p>The Lake District is a national park known for its stunning lakes, mountains, and picturesque villages. Outdoor enthusiasts can enjoy hiking, boating, cycling, and exploring charming towns like Windermere and Keswick.</p>
+                <p>The region inspired famous poets like William Wordsworth and Beatrix Potter. Its natural beauty, walking trails, and scenic landscapes make it a must-visit for nature lovers and photographers.</p>
+
+                <h4>Must-See Attractions</h4>
+                <ul>
+                    <li>Lake Windermere - Largest natural lake in England</li>
+                    <li>Scafell Pike - England's highest mountain</li>
+                    <li>Beatrix Potter’s Hill Top - Historic home of the author</li>
+                    <li>Keswick - Picturesque town in the northern Lakes</li>
+                    <li>Derwentwater - Scenic lake with boat tours</li>
+                </ul>
+                <p><a href="#top">Back to top</a></p>
+            </article>
+
+            <hr>
+
+            <!-- ================= TRAVEL TIPS SECTION ================ -->
+            <!-- 
+                Useful tips on going to UK: language, dining, weather, etc. 
+            -->
+            <section>
+                <h3>Travel Tips for the United Kingdom</h3>
+                <p>Here are essential tips for traveling in the UK to help make your trip enjoyable.</p>
+                <ul>
+                    <li><strong>Language</strong>: English is widely spoken, but local accents vary; learn basic phrases for Wales and Scotland.</li>
+                    <li><strong>Dining</strong>: Traditional pubs offer hearty meals; tipping 10-15% is customary.</li>
+                    <li><strong>Weather</strong>: UK weather is unpredictable; always carry a waterproof jacket or umbrella.</li>
+                    <li><strong>Transport</strong>: Trains connect major cities efficiently; Oyster card is convenient for London transport.</li>
+                    <li><strong>Etiquette</strong>: Queue politely, respect local customs, and be punctual for trains and tours.</li>
+                </ul>
+            </section>
+
+            <hr>
+            <!-- Simple navigation to go back to Europe page or the home. -->
+            <p class="back-nav"><a href="europe.html">&larr; Back to Europe</a> <a href="index.html">Home</a></p>
+        </section>
+    </main>
+
+    <!-- ========= FOOTER SECTION ======= -->
+    <!-- 
+        Normal footer used throughout the website with contact email.
+    -->
+    <footer>
+        <hr>
+        <p>Email: <a href="mailto:contact@email.com">contact@email.com</a> | Explore.org</p>
+        <p>Copyright &copy; 2026 Explore the World</p>
+    </footer>
+</body>
+</html>
+

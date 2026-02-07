@@ -1,0 +1,192 @@
+<!--Name - Dewshini Mendis -->
+<!--Student_ID - 10675332 -->
+<!--Validated -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        Character encoding and responsive designing meta tags.
+        UTF-8 supports the correct display of special characters.
+        viewport meta tag renders the site responsive to mobile.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 
+        Page title that display in browser tab.
+    -->
+    <title>Explore The World</title>
+
+    <!--
+        External CSS stylesheet link
+        This single CSS file controls all visual styling and layout
+        across the entire website as required by the assignment
+    -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- ==================== HEADER SECTION ==================== -->
+    <!-- 
+        Site logo/title, main navigation includes header
+        Greater accessibility and SEO through the use of semantic <header> tag
+    -->
+    <header>
+        <!-- 
+            Main site heading using <h1> tag
+            Only one <h1> should be used per page for proper document hierarchy
+        -->
+        <h1>Explore The World</h1>
+        
+        <!-- 
+            Tagline/subtitle using <p> tag
+            Gives background information on the purpose of the website.
+        -->
+        <p>Discover the beauty of our planet, one continent at a time</p>
+    </header>
+    
+    <!-- ==================== NAVIGATION SECTION ==================== -->
+    <!-- 
+        Navigation bar using semantic <nav> tag
+        There are links to every main page of the site
+        It is better to use unordered list as <ul> is better structured
+    -->
+    <nav>
+        <ul>
+            <!-- Current page link - could be styled differently with CSS later -->
+            <!-- Current page styled with active class for visual indicator -->
+            <li><a href="index.html" class="active">Home</a></li>
+
+            <!-- Link to About page -->
+            <li><a href="about.html">About</a></li>
+
+            <!-- Link to Contact page -->
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- ==================== MAIN CONTENT SECTION ==================== -->
+    <!-- 
+        Main content area using semantic <main> tag
+        Should contain the primary content of the page
+        Only one <main> element should exist per page
+    -->
+    <main>
+        
+        <!-- 
+            Introduction section
+            With the help of the <section> to combine the related content
+        -->
+        <section>
+            <h2>Welcome to Explore The World</h2>
+            
+            <p>Explore The World is a platform dedicated to inspiring curiosity and adventure. 
+               We provide accurate and engaging information about countries, cultures, and natural wonders, 
+               helping travelers, students, and knowledge seekers discover new horizons.</p>
+            
+            <p>Our goal is to make global exploration accessible and educational, highlighting unique destinations, 
+               must-see attractions, and local insights. Whether planning a trip or learning from home, our resources guide your journey.</p>
+
+            <p>Want a global overview? Visit the <a href="https://www.un.org/en/about-us">United Nations</a> to learn about countries and international cooperation.</p>
+        </section>
+        
+        <!-- ==================== CONTINENTS SECTION ==================== -->
+        <!-- 
+            Demonstration of all continents in the main section
+            Each continent is represented as an article with image and description
+        -->
+        <section>
+            <h2>Explore Continents</h2>
+            
+            <p>Select a continent below to discover amazing countries and destinations around the world.</p>
+
+            <div class="continent-grid">
+
+                <!-- ASIA CONTINENT -->
+                <article>
+                    <h3>Asia</h3>
+                    <img src="Continents/asia-placeholder.jpg" alt="Beautiful Asian landscape with temples and mountains" width="400" height="300">
+                    <p>The world's largest continent, home to ancient civilizations, magnificent temples, and modern metropolises.</p>
+                    <p><a href="asia.html">Explore Asia &rarr;</a></p>
+                </article>
+
+                <!-- EUROPE CONTINENT -->
+                <article>
+                    <h3>Europe</h3>
+                    <img src="Continents/europe-placeholder.jpg" alt="Historic European castle and medieval architecture" width="400" height="300">
+                    <p>A rich tapestry of history, art, and diverse cultures spanning centuries of civilization.</p>
+                    <p><a href="europe.html">Explore Europe &rarr;</a></p>
+                </article>
+
+                <!-- AFRICA CONTINENT -->
+                <article>
+                    <h3>Africa</h3>
+                    <img src="Continents/africa-placeholder.jpg" alt="African savanna with wildlife and sunset" width="400" height="300">
+                    <p>Experience incredible wildlife, diverse landscapes, and vibrant cultures across the continent.</p>
+                    <p><a href="africa.html">Explore Africa &rarr;</a></p>
+                </article>
+
+                <!-- NORTH AMERICA CONTINENT -->
+                <article>
+                    <h3>North America</h3>
+                    <img src="Continents/north-america-placeholder.jpg" alt="North American landmarks and natural parks" width="400" height="300">
+                    <p>From towering skyscrapers to breathtaking national parks, discover diversity and grandeur.</p>
+                    <p><a href="north-america.html">Explore North America &rarr;</a></p>
+                </article>
+
+                <!-- OCEANIA CONTINENT -->
+                <article>
+                    <h3>Oceania</h3>
+                    <img src="Continents/oceania-placeholder.jpg" alt="Oceania beaches and tropical islands" width="400" height="300">
+                    <p>Discover pristine beaches, unique wildlife, and island paradises in the Pacific Ocean, including Fiji, New Zealand, and Australia.</p>
+                    <p><a href="oceania.html">Explore Oceania &rarr;</a></p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ==================== EXTERNAL VIDEO LINK ==================== -->
+        <!-- 
+            YouTube video embedded demonstrating the beauty of countries in the world.
+            Provides a visitor with a visual preview in line with the theme of the site.
+        -->
+        <section>
+            <h2>Watch: The Beauty of Countries Around the World</h2>
+            <p>Enjoy this 4K travel video that highlights some of the most beautiful countries on Earth.</p>
+
+            <!-- Responsive YouTube embed -->
+            <div class="video-embed">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/VYcBe0WhYxw"
+                    title="YouTube video player"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- ==================== FOOTER SECTION ==================== -->
+    <!-- 
+        Footer contains contact information and external links
+        Using semantic <footer> tag for better document structure
+    -->
+    <footer>
+        
+        <hr>
+
+        <!-- Email link using mailto: protocol to open default email client -->
+        <p>Email: <a href="mailto:contact@email.com">contact@email.com</a> | Explore.org</p>
+
+        <!-- Copyright notice -->
+        <p>Copyright &copy; 2026 Explore the World</p>
+
+    </footer>
+    
+</body>
+</html>
